@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+</head>
+<style>
+    .center p {
+        line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #round_corners {
+        border-radius: 30px;
+        border: 2px solid #7e57d4;
+        padding: 20px;
+        width: 400px;
+        height: 50px;
+    }
+
+    .form button {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4CAF50;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .form button:hover, .form button:active, .form button:focus {
+        background: #43A047;
+    }
+
+    body {
+        background: #76b852;
+        background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+        background: -moz-linear-gradient(right, #76b852, #8DC26F);
+        background: -o-linear-gradient(right, #76b852, #8DC26F);
+        background: linear-gradient(to left, #76b852, #8DC26F);
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+</style>
+{% for error in errors %}
+    <p id="round_corners">
+        {{ error }} <br>
+    </p>
+{% endfor %}
+
+<p id="round_corners" style="font-weight: bold;"> {{ message }} <br></p>
+<button onclick="window.location.href='/'">Back</button>
+</html>
